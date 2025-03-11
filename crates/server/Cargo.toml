@@ -1,0 +1,23 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core = { path = "../core" }
+tokio = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+dashmap = { workspace = true }
+bytes = { workspace = true }
+
+# Server-specific dependencies
+tokio-util = { version = "0.7", features = ["codec"] }
+hyper = { version = "1.0", features = ["full"] }
+tower = "0.4"
+memmap2 = "0.9"
+parking_lot = "0.12" 
